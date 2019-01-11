@@ -798,3 +798,6 @@ func (s *DB) slog(sql string, t time.Time, vars ...interface{}) {
 		s.print("sql", fileWithLineNum(), NowFunc().Sub(t), sql, vars, s.RowsAffected)
 	}
 }
+func (s *DB) GetSearch() *search {
+	return s.search
+}
